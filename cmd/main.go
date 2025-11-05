@@ -65,11 +65,11 @@ func main() {
 		}
 		handlers.MarkTask(id)
 	case "list":
-		status := ""
-		if len(os.Args) > 2 {
-			status = os.Args[2]
-		}
-		handlers.ListTasks(status)
+		handlers.ListTasks("")
+	case "list-complete":
+		handlers.ListTasks("complete")
+	case "list-in-progress":
+		handlers.ListTasks("in-progress")
 	default:
 		fmt.Println("Invalid command")
 	}
