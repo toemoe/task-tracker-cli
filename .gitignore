@@ -5,6 +5,7 @@
 *.dylib
 *.mod
 *.test
+*.sum
 
 .idea/
 .vscode/
