@@ -2,26 +2,25 @@
   {
     "id": "9f1763de-48da-49b2-a3c7-4f6dcf08512f",
     "name": "Task-Tracker",
-    "status": "complete"
+    "status": "complete",
+    "description": "",
+    "created_at": "0001-01-01T00:00:00Z",
+    "updated_at": "0001-01-01T00:00:00Z"
   },
   {
     "id": "e42733d2-d93c-4c6b-adb8-d1a81a284495",
     "name": "end-cli",
-    "status": "in-progress"
+    "status": "in-progress",
+    "description": "",
+    "created_at": "0001-01-01T00:00:00Z",
+    "updated_at": "0001-01-01T00:00:00Z"
   },
   {
     "id": "9576dd85-ba00-44dd-b977-1e8af5bcb93a",
     "name": "Read a book",
-    "status": "todo"
-  },
-  {
-    "id": "46ce4364-a992-4653-a97a-1b27f5609c1a",
-    "name": "Write a report",
-    "status": "todo"
-  },
-  {
-    "id": "47465f86-f02a-4386-8662-721de952e038",
-    "name": "Prepare presentation",
-    "status": "in-progress"
+    "status": "todo",
+    "description": "",
+    "created_at": "0001-01-01T00:00:00Z",
+    "updated_at": "0001-01-01T00:00:00Z"
   }
 ]

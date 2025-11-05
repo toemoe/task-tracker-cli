@@ -3,14 +3,22 @@ package handlers
 import (
 	"encoding/json"
 	"fmt"
+	"time"
 
 	"github.com/google/uuid"
 	"github.com/toemoe/task-tracker-cli/internal/models"
 	"github.com/toemoe/task-tracker-cli/internal/storage"
 )
 
-func AddTask(name string) {
-	task := models.Task{ID: uuid.New().String(), Name: name, Status: models.StatusTodo}
+func AddTask(name, description string) {
+	task := models.Task{
+		ID:          uuid.New().String(),
+		Name:        name,
+		Status:      models.StatusTodo,
+		Description: description,
+		CreatedAt:   time.Now(),
+		UpdatedAt:   time.Now(),
+	}
 	storage.AddTask(task)
 
 	if _, err := json.Marshal(task); err != nil {
@@ -29,8 +37,8 @@ func DeleteTask(id string) {
 	}
 }
 
-func UpdateTask(id string, name string) {
-	if storage.UpdateTask(id, name) {
+func UpdateTask(id, name, description string) {
+	if storage.UpdateTask(id, name, description) {
 		fmt.Println("task updated successfully")
 	} else {
 		fmt.Println("task not found")

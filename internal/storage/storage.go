@@ -6,6 +6,7 @@ import (
 	"os"
 
 	"github.com/toemoe/task-tracker-cli/internal/models"
+	"github.com/toemoe/task-tracker-cli/pkg/utils"
 )
 
 var tasks []models.Task
@@ -49,10 +50,12 @@ func DeleteTask(id string) bool {
 	return false
 }
 
-func UpdateTask(id string, name string) bool {
+func UpdateTask(id, name, description string) bool {
 	for i, task := range tasks {
 		if task.ID == id {
 			tasks[i].Name = name
+			tasks[i].Description = description
+			tasks[i].UpdatedAt = utils.GetTimeNow()
 			return true
 		}
 	}

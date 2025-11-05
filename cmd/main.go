@@ -29,7 +29,8 @@ func main() {
 			return
 		}
 		name := os.Args[2]
-		handlers.AddTask(name)
+		description := os.Args[3]
+		handlers.AddTask(name, description)
 	case "delete":
 		if len(os.Args) < 3 {
 			fmt.Println("Usage: task-cli delete [task_id]")
@@ -52,7 +53,8 @@ func main() {
 			return
 		}
 		name := os.Args[3]
-		handlers.UpdateTask(id, name)
+		description := os.Args[4]
+		handlers.UpdateTask(id, name, description)
 	case "mark":
 		if len(os.Args) < 3 {
 			fmt.Println("Usage: task-cli mark [task_id]")
