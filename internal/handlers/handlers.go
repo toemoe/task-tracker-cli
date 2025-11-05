@@ -1,7 +1,6 @@
 package handlers
 
 import (
-	"encoding/json"
 	"fmt"
 	"time"
 
@@ -20,12 +19,6 @@ func AddTask(name, description string) {
 		UpdatedAt:   time.Now(),
 	}
 	storage.AddTask(task)
-
-	if _, err := json.Marshal(task); err != nil {
-		fmt.Println("serialization error:", err)
-		return
-	}
-
 	fmt.Printf("task %s added\n", task.Name)
 }
 
