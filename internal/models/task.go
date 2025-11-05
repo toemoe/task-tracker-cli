@@ -3,6 +3,7 @@ package models
 const (
 	StatusComplete   = "complete"
 	StatusInProgress = "in-progress"
+	StatusTodo       = "todo"
 )
 
 type Task struct {

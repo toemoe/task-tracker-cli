@@ -12,12 +12,12 @@
   {
     "id": "9576dd85-ba00-44dd-b977-1e8af5bcb93a",
     "name": "Read a book",
-    "status": "in-progress"
+    "status": "todo"
   },
   {
     "id": "46ce4364-a992-4653-a97a-1b27f5609c1a",
     "name": "Write a report",
-    "status": "in-progress"
+    "status": "todo"
   },
   {
     "id": "47465f86-f02a-4386-8662-721de952e038",

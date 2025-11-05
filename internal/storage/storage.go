@@ -63,10 +63,12 @@ func MarkTask(id string) bool {
 	for i, task := range tasks {
 		if task.ID == id {
 			switch task.Status {
-			case models.StatusComplete:
+			case models.StatusTodo:
 				tasks[i].Status = models.StatusInProgress
 			case models.StatusInProgress:
 				tasks[i].Status = models.StatusComplete
+			case models.StatusComplete:
+				tasks[i].Status = models.StatusTodo
 			}
 			return true
 		}

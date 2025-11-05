@@ -10,7 +10,7 @@ import (
 )
 
 func AddTask(name string) {
-	task := models.Task{ID: uuid.New().String(), Name: name, Status: models.StatusInProgress}
+	task := models.Task{ID: uuid.New().String(), Name: name, Status: models.StatusTodo}
 	storage.AddTask(task)
 
 	if _, err := json.Marshal(task); err != nil {

@@ -70,6 +70,8 @@ func main() {
 		handlers.ListTasks("complete")
 	case "list-in-progress":
 		handlers.ListTasks("in-progress")
+	case "list-todo":
+		handlers.ListTasks("todo")
 	default:
 		fmt.Println("Invalid command")
 	}
